@@ -6,3 +6,7 @@ prefix: '${project.name}'
 load: STARTUP
 author: AchyMake
 description: '${project.description}'
+permissions:
+  autopick.event.join.update:
+    description: gets update
+    default: op
