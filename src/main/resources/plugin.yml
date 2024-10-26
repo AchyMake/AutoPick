@@ -1,0 +1,8 @@
+name: AutoPick
+version: '${project.version}'
+main: org.achymake.autopick.AutoPick
+api-version: '1.21'
+prefix: '${project.name}'
+load: STARTUP
+author: AchyMake
+description: '${project.description}'
