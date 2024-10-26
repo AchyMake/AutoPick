@@ -16,9 +16,11 @@ public final class AutoPick extends JavaPlugin {
         materialHandler = new MaterialHandler();
         manager = getServer().getPluginManager();
         events();
+        sendInfo("Enabled for " + getMinecraftProvider() + " " + getMinecraftVersion());
     }
     @Override
     public void onDisable() {
+        sendInfo("Disabled for " + getMinecraftProvider() + " " + getMinecraftVersion());
     }
     private void events() {
         new BlockDropItem();
@@ -32,5 +34,14 @@ public final class AutoPick extends JavaPlugin {
     }
     public static AutoPick getInstance() {
         return instance;
+    }
+    public void sendInfo(String message) {
+        getLogger().info(message);
+    }
+    public String getMinecraftVersion() {
+        return getServer().getBukkitVersion();
+    }
+    public String getMinecraftProvider() {
+        return getServer().getName();
     }
 }
